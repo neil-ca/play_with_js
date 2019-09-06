@@ -12,9 +12,11 @@ import Register from "./Pages/Register"
 import Page404 from './Pages/Page404'
 import Protected from './Routes/Protected'
 import Public from './Routes/Public'
+import Header from './Organisms/Header'
 
 const App = () => (
   <Router>
+    <Header />
     <Switch>
       <Protected path = "/" exact component={Home} />
       <Protected path = "/especialidades" exact component={Specialities} />
