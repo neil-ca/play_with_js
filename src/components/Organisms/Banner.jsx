@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const Banner = ({color, image, title , subtitle, home}) => (
+const Banner = ({color, image, title , subtitle, home, poster, courseBanner, especialidad}) => (
   <div className={`main-banner img-container l-block ${color}`}>
       <div className="ed-grid">
         <div>
@@ -19,15 +19,27 @@ const Banner = ({color, image, title , subtitle, home}) => (
             <Link to="/cursos" className= "button second-color">Ver cursos</Link>
             </div>
             <div className="img-container s-ratio-16-9">
-              <img src="https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-07/EspecialidadEdicionAudioVisual.png" alt="Banner del home"/>
+              <img src={poster} alt="Banner del home"/>
             </div>
             </div>
             :
-            <div className="main-banner__data s-center">
-            <h1 className="main-banner__title">{title}</h1>
-            <p>{subtitle} </p>
-            
-          </div>
+             courseBanner ?
+             <div className="ed-grid m-grid-3">
+             <div className="main-banner__data m-cols-2 ">
+             <h1 className="main-banner__title">{title}</h1>
+             <p>{subtitle} </p>
+             <p>Este curso forma parte de la especialidad <Link to="/especialidades">{especialidad}</Link></p>
+             
+             </div>
+             <div className="img-container s-ratio-16-9 m-cols-1">
+               <img src={poster} alt="Banner del home"/>
+             </div>
+             </div>
+             :
+             <div className="main-banner__data s-center">
+             <h1 className="main-banner__title">{title}</h1>
+             <p>{subtitle} </p>
+             </div>
             
           }
           
