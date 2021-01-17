@@ -19,7 +19,7 @@ const Course = ({course}) => {
       title={course.name}
       subtitle={course.subtitle}
       image={{
-        src: "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2018-04/office-tech.jpg?itok=0L55-FRs",
+        src: "http://seclist.us/wp-content/uploads/2015/10/myshellcode-debugging-470x260.jpg",
         alt: course.name
       }}
       courseBanner

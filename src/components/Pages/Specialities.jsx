@@ -1,4 +1,4 @@
-import React, { useEffect} from "react"
+import React, { useEffect } from "react"
 import Banner from "../Organisms/Banner"
 import store from '../../redux/store'
 import { getAllSpecialities } from '../../redux/actionCreators'
@@ -12,36 +12,36 @@ const Specialities = ({ specialities }) => {
   }, [])
   return (
     <>
-    <Banner
-    color="dark-color"
-    image={{
-      src: "http://imagenes.universia.net/gc/net/images/ciencia-tecnologia/l/la/las/las-especialidades-de-la-informatica-con-mas-salida-laboral.jpg",
-      alt: "Banner Especialidades"
-    }}
-    title="Especialidades"
-    subtitle="Domina una tecnología con las mejores rutas de aprendizaje"
-  />
-  {
-    specialities &&
-    <main className="ed-grid m-grid-3">
+      <Banner
+        color="dark-color"
+        image={{
+          src: "http://seclist.us/wp-content/uploads/2015/10/myshellcode-debugging-470x260.jpg",
+          alt: "Banner Especialidades"
+        }}
+        title="Especialidades"
+        subtitle="Domina una tecnología con las mejores rutas de aprendizaje"
+      />
       {
-      specialities.map(s => (
-        <Card 
-        path = "especialidades" 
-        picture= {s.picture}
-        name = {s.name} 
-        key = {s.id} 
-        card= {s.id}
-        />
-      ))
-}
-    </main>
-  }
-  </>
+        specialities &&
+        <main className="ed-grid m-grid-3">
+          {
+            specialities.map(s => (
+              <Card
+                path="especialidades"
+                picture={s.picture}
+                name={s.name}
+                key={s.id}
+                card={s.id}
+              />
+            ))
+          }
+        </main>
+      }
+    </>
   )
 }
 
-const mapStateToProps = state =>({
+const mapStateToProps = state => ({
   specialities: state.specialityReducer.specialities
 })
 

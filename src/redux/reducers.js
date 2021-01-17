@@ -2,14 +2,14 @@ import { GET_ALL_POSTS, GET_POST, GET_ALL_SPECIALITIES, GET_SPECIALITY, GET_ALL_
 
 
 export const postReducer = (state = {}, action) => {
-  if (action.type === GET_ALL_POSTS){
+  if (action.type === GET_ALL_POSTS) {
     return {
       ...state,
       posts: action.posts
     }
   }
 
-  if (action.type === GET_POST){
+  if (action.type === GET_POST) {
     return {
       ...state,
       post: action.post
@@ -18,14 +18,14 @@ export const postReducer = (state = {}, action) => {
   return state
 }
 export const specialityReducer = (state = {}, action) => {
-  if (action.type === GET_ALL_SPECIALITIES){
+  if (action.type === GET_ALL_SPECIALITIES) {
     return {
       ...state,
       specialities: action.specialities
     }
   }
 
-  if (action.type === GET_SPECIALITY){
+  if (action.type === GET_SPECIALITY) {
     return {
       ...state,
       speciality: action.speciality
@@ -34,14 +34,14 @@ export const specialityReducer = (state = {}, action) => {
   return state
 }
 export const courseReducer = (state = {}, action) => {
-  if (action.type === GET_ALL_COURSES){
+  if (action.type === GET_ALL_COURSES) {
     return {
       ...state,
       courses: action.courses
     }
   }
 
-  if (action.type === GET_COURSE){
+  if (action.type === GET_COURSE) {
     return {
       ...state,
       course: action.course
@@ -50,7 +50,7 @@ export const courseReducer = (state = {}, action) => {
   return state
 }
 export const teacherReducer = (state = {}, action) => {
-  if (action.type === GET_ALL_TEACHERS){
+  if (action.type === GET_ALL_TEACHERS) {
     return {
       ...state,
       teachers: action.teachers
@@ -59,8 +59,8 @@ export const teacherReducer = (state = {}, action) => {
   return state
 }
 export const fragmentReducer = (state = {}, action) => {
-  
-  if (action.type === GET_FRAGMENT){
+
+  if (action.type === GET_FRAGMENT) {
     return {
       ...state,
       fragment: action.fragment

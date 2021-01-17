@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Publication = ({title, author, fecha, content}) => {
+const Publication = ({ title, author, fecha, content }) => {
   return (
     <article className="publicattion l-block">
       <div className="publication__container">
@@ -12,7 +12,7 @@ const Publication = ({title, author, fecha, content}) => {
     </article>
 
   )
-  
+
 }
 
 export default Publication

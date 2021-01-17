@@ -15,7 +15,7 @@ useEffect(() => {
    <Banner
     color="third-color"
     image={{
-      src:"https://drupal.ed.team/sites/default/files/imagenes-cdn-edteam/2017-11/banner-equipo.jpg",
+      src:"http://seclist.us/wp-content/uploads/2015/10/myshellcode-debugging-470x260.jpg",
       alt:"Banner profesores"
     }}
     title="Nuestros profesores"
