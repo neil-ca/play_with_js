@@ -1,0 +1,56 @@
+ 
+// COLOR VARIABLES
+$color-primary:#2B7C85;
+ 
+$color-primary-dark: #0C1446;;
+
+$color-secondary: #87ACA3;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// FONT VARIABLES
+$font-primary: 'Yusei Magic', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+// RESPONSE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: #87ACA3;
+    font-size: 62.5%; // 10 / 16
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+body {
+    font-family: $font-primary;
+    color: $color-grey-dark-1;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+// Header 
+.main-menu {
+    display: grid;
+}
+.main-logo {
+    width: 40px;
+    height: 40px;
+}

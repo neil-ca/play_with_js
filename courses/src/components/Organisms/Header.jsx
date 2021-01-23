@@ -2,6 +2,7 @@ import React, { createRef } from 'react'
 import { NavLink } from "react-router-dom"
 import PublicMenu from '../Molecules/PublicMenu';
 import PrivateMenu from '../Molecules/PrivateMenu';
+import Logo from '../../assets/logo.svg';
 
 const menu = createRef()
 const toggleMenu = () => menu.current.classList.toggle('show')
@@ -12,8 +13,8 @@ const Header = () => (
       <div className="s-cols-4 lg-cols-1 s-cross-center">
         <NavLink to="/">
           <img
-            src="https://ed.team/static/images/logo.svg"
-            alt="EDlogo"
+            src={Logo}
+            alt="dedu"
             className="main-logo"
           />
         </NavLink>

@@ -1,0 +1,18 @@
+{
+  "name": "movie_list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/App.jsx --bundle --define:process.env.NODE_ENV='\"development\"' --outfile=dist/out.js"
+  },
+  "keywords": [],
+  "author": "Ulises",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.8.34",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
