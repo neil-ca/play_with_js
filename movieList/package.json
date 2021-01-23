@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "esbuild src/App.jsx --bundle --define:process.env.NODE_ENV='\"development\"' --outfile=dist/out.js",
+    "dev": "esbuild index.jsx --bundle --define:process.env.NODE_ENV='\"development\"' --outfile=dist/out.js",
     "build": "esbuild src/App.jsx --bundle --define:process.env.NODE_ENV='\"production\"' --minify --outfile=dist/out.js"
   },
   "keywords": [],
