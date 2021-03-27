@@ -1,27 +1,35 @@
-const template = document.createElement('div')
-template.innerHTML = `
-    <style>
-        p {
-            color: green;
-        }
-        h3 {
-            color: red;
-        }
-    </style>
-    <p> Hello <p>
-    <h1>this is amazing</h1>
-    <h3>my man</h3>
-`
 class myElement extends HTMLElement {
     constructor() {
         super()
-        // console.log("Hey")
-        this.p = document.createElement('p')
+        this.attachShadow({ mode: 'open' })
+    }
+    getTemplate() {
+        const template = document.createElement('template')
+        template.innerHTML = `
+        <p> Hello <p>
+        <h1>this is amazing</h1>
+        <h3>my man</h3>
+        ${this.getStyles()}
+    `
+        return template
+    }
+    getStyles() {
+        return `
+        <style>
+            p {
+                color: green;
+            }
+            h3 {
+                color: red;
+            }
+        </style>
+        `
+    }
+    render() {
+        this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true))
     }
     connectedCallback() {
-        this.p.textContent = "Hello this is an p"
-        this.appendChild(this.p)
-        this.appendChild(template)
+        this.render()
     }
 }
 customElements.define('my-element', myElement)
