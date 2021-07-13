@@ -2,3 +2,5 @@ movie-list/node_modules
 movie-list/.next
 movie-list/dist/out.js
 courses/.eslintcache
+api_caching/node_modules
+

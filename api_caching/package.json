@@ -1,0 +1,17 @@
+{
+  "name": "api_caching",
+  "version": "1.0.0",
+  "description": "Caching API responses with redis",
+  "main": "api.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Neil Ulises",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "ioredis": "^4.27.6"
+  }
+}
